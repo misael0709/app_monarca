@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="img/fav/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/form_style.css">
+</head>
+
+<body>
+    <div class="login-conteiner">
+        <div class="logo">
+            <img src="img/logo.png" alt="Monarca Logo"/>
+        </div>
+        
+        <div class="input-field">
+            <span class="icon">👤</span>
+            <input type="text" placeholder="Usuario">
+        </div>
+    
+        <div class="input-field">
+            <span class="icon">🔒</span>
+            <input type="password" id="password" placeholder="Contraseña">
+            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
+        </div>
+    
+        <a href="#" class="forgot-password">Recuperar contraseña</a>
+        
+        <button class="login-btn">Iniciar Sesión</button>
+    
+        <div class="register-link">--Registro--</div>
+        
+        <div class="demo-version">*Versión demo</div>
+    </div>
+</body>
+<script>
+    function togglePasswordVisibility() {
+    const passwordInput = document.getElementById("password");
+    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+}
+</script>
+</html>

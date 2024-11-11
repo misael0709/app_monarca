@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Logo */
+.logo img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    justify-items: center;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    justify-items: center;
+}
+
+/* Campo de entrada */
+.input-field {
+    position: relative;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px; /* Espacio para el ícono a la izquierda */
+    padding-right: 35px; /* Espacio para el botón de mostrar/ocultar */
+    border: 1px solid #ed833a;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.input-field .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+/* Estilo del botón de mostrar/ocultar contraseña */
+.input-field .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Botón */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffb174;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #ff8a47;
+}
+
+/* Texto de recuperar contraseña */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+    text-decoration: none;
+    padding:10px;
+    text-align: center;
+}
+
+.forgot-password:hover {
+    color: #ff8a47;
+}
+
+/* Enlace de registro */
+.register-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+}
+
+.demo-version {
+    margin-top: 20px;
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}
