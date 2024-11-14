@@ -1,15 +1,17 @@
+<!-- tracking.html -->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - FarmaciaDron Monarca</title>
+    <title>Rastrear Pedido - FarmaciaDron Monarca</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets\images\fav\favicon.ico" type="image/x-icon">
     <link href="assets/css/styles.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+</head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -38,31 +40,53 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Tracking Section -->
     <div class="container py-5">
-        <div class="d-flex justify-content-center mb-4">
-            <img src="assets\images\logo.png" alt="Monarca Logo" class="img-fluid" style="max-width: 200px";/>
-        </div>
-        <div class="row justify-content-center">
+        <h2 class="section-title mb-4">Rastrear mi Pedido</h2>
+        
+        <div class="row">
             <div class="col-md-6">
-                <!-- <h2 class="mb-4 text-center">Iniciar Sesión</h2> -->
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label"> 👤 Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" required>
+                <!-- Formulario de búsqueda -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Número de Pedido</label>
+                                <input type="text" class="form-control" placeholder="Ej: DRN-123456">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Rastrear</button>
+                        </form>
                     </div>
-                    <div class="mb-3 position-relative">
-                        <label for="password" class="form-label">🔒 Contraseña</label>
-                        <input type="password" class="form-control" id="password" required>
-                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
+                </div>
+
+                <!-- Estado del Drone -->
+                <div class="drone-status">
+                    <h4>Estado del Drone</h4>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
-                    <p class="mt-3 text-center">
-                        ¿No tienes cuenta? <a href="register.html">Regístrate aquí</a>
-                    </p>
-                </form>
+                    <ul class="list-unstyled">
+                        <li>✅ Pedido Confirmado</li>
+                        <li>✅ En Preparación</li>
+                        <li>✅ Drone en Camino</li>
+                        <li>⏳ Entrega Final</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <!-- Mapa de seguimiento -->
+                <div class="card">
+                    <div class="card-body">
+                        <div id="map" style="height: 400px;" class="rounded"></div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -81,14 +105,23 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
-        function togglePasswordVisibility() {
-        const passwordInput = document.getElementById("password");
-        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-        passwordInput.setAttribute("type", type);
-    }
+        // Initialize the map and set its view to your desired location and zoom level
+        var map = L.map('map').setView([19.4326, -99.1332], 13); // Coordinates for Mexico City, change as needed
+    
+        // Add a tile layer to the map (OpenStreetMap is a good default option)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Example: Add a marker for the drone location
+        var marker = L.marker([19.4326, -99.1332]).addTo(map)
+            .bindPopup('Ubicación del Drone')
+            .openPopup();
     </script>
+    
 </body>
-
 </html>

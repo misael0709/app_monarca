@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - FarmaciaDron Monarca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets\images\fav\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets\images\simbolo.png" alt="Monarca" style="height: 30px; width: auto;"> Monarca
+            </a>   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tracking.html">Rastrear Pedido</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuenta.html">Mi Cuenta</a>
+                    </li>
+                </ul>
+                <a href="carrito.html" class="btn btn-outline-light">
+                    🛒 Carrito (0)
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Carrito Section -->
+    <div class="container py-5">
+        <h2 class="section-title mb-4">Carrito de Compras</h2>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Lista de Productos en Carrito -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                <img src="assets/images/images.jfif" class="img-fluid rounded" alt="Producto">
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Paracetamol</h5>
+                                <p class="text-muted">Tabletas 500mg - 20 unidades</p>
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <p><strong>$150 MXN</strong></p>
+                                <button class="btn btn-sm btn-danger">Eliminar</button>
+                            </div>
+                        </div>
+                        <!-- More products can be added here -->
+                    </div>
+                </div>
+
+                <!-- Total and Checkout Button -->
+                <div class="card mb-4">
+                    <div class="card-body text-end">
+                        <h4>Total: $150 MXN</h4>
+                        <button class="btn btn-primary">Proceder al Pago</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <!-- Formulario de Dirección de Envío -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5>Dirección de Envío</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Calle y Número</label>
+                                <input type="text" class="form-control" placeholder="Ej: Av. Revolución 123">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Colonia</label>
+                                <input type="text" class="form-control" placeholder="Ej: Col. Centro">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" placeholder="Ej: Ciudad de México">
+                            </div>
+                        </form>
+
+                        <h5>Seleccionar en el Mapa</h5>
+                        <div id="map" style="height: 300px;" class="rounded"></div>
+                    </div>
+                </div>
+
+                <!-- Opciones de Método de Pago -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Método de Pago</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                            <label class="form-check-label" for="creditCard">Tarjeta de Crédito/Débito</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="cash">
+                            <label class="form-check-label" for="cash">Efectivo al recibir</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><img src="assets\images\simbolo.png" alt="Monarca" style="height: 30px; width: auto;">
+                        Monarca</h5>
+                    <p>Inspirados en la belleza y eficiencia de la naturaleza</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Síguenos en redes sociales</p>
+                    <a href="#" class="text-white me-3">Facebook</a>
+                    <a href="#" class="text-white me-3">Twitter</a>
+                    <a href="#" class="text-white">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([19.4326, -99.1332], 13); // Coordinates for Mexico City, change as needed
+
+        // Add a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker for the user's address (you can make this draggable to allow address selection)
+        var marker = L.marker([19.4326, -99.1332], {draggable: true}).addTo(map)
+            .bindPopup('Tu dirección de envío')
+            .openPopup();
+
+        // Update address fields when marker is dragged
+        marker.on('dragend', function(e) {
+            var position = marker.getLatLng();
+            console.log("Selected Position:", position);
+            // You can update the form fields with the new coordinates if needed
+        });
+    </script>
+</body>
+</html>

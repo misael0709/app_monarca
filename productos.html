@@ -1,0 +1,140 @@
+<!-- productos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - FarmaciaDron Monarca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets\images\fav\favicon.ico" type="image/x-icon">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets\images\simbolo.png" alt="Monarca" style="height: 30px; width: auto;"> Monarca
+            </a>   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tracking.html">Rastrear Pedido</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuenta.html">Mi Cuenta</a>
+                    </li>
+                </ul>
+                <a href="carrito.html" class="btn btn-outline-light">
+                    🛒 Carrito (0)
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Productos Section -->
+    <div class="container py-5">
+        <h2 class="section-title mb-4">Nuestros Productos</h2>
+        
+        <!-- Filtros -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Categorías</option>
+                    <option>Antidotos</option>
+                    <option>Sangre y Plasma</option>
+                    <option>Material de curación</option>
+                    <option>Anafilaxia</option>
+                    <option>Antitoxinas</option>
+                    <option>Medicamentos</option>
+                    <option>Anti-venenos</option>
+                    <option>Criticos</option>
+                    <option>Insumos</option>
+                    <option>Indumentaria Quirúrgica</option>
+                    <option>Otros</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <input type="search" class="form-control" placeholder="Buscar productos...">
+            </div>
+        </div>
+
+        <!-- Lista de Productos -->
+        <div class="row flex-column flex-md-row overflow-x-auto">
+            <!-- Producto 1 -->
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="assets\images\productos\producto-quadri-4.png" class="card-img-top img-fluid w-100" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Quadriloid Crema 40g</h5>
+                        <p class="card-text">Peso: 120gr</p>
+                        <p class="text-primary">$230.00 MXN</p>
+                        <button class="btn btn-primary w-100">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="assets\images\productos\7502276850752.webp" class="card-img-top img-fluid w-100" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Solución Antiséptica 120ml Marca del Ahorro</h5>
+                        <p class="card-text">Peso: 120gr</p>
+                        <p class="text-primary">$122.00 MXN</p>
+                        <button class="btn btn-primary w-100">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="assets\images\productos\7501299309841_bb.webp" class="card-img-top img-fluid w-100" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Bold 36 20 mg/5.5g caja 2 sobres</h5>
+                        <p class="card-text">Peso: 8gr</p>
+                        <p class="text-primary">$126.00 MXN</p>
+                        <button class="btn btn-primary w-100">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="assets\images\productos\paracetamol.jpeg" class="card-img-top img-fluid w-100" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Paracetamol</h5>
+                        <p class="card-text">Peso: 40gr</p>
+                        <p class="text-primary">$99.00 MXN</p>
+                        <button class="btn btn-primary w-100">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Más productos... -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><img src="assets\images\simbolo.png" alt="Monarca" style="height: 30px; width: auto;">
+                        Monarca</h5>
+                    <p>Inspirados en la belleza y eficiencia de la naturaleza</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Síguenos en redes sociales</p>
+                    <a href="#" class="text-white me-3">Facebook</a>
+                    <a href="#" class="text-white me-3">Twitter</a>
+                    <a href="#" class="text-white">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

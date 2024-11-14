@@ -1,0 +1,524 @@
+/* styles.css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --monarca-orange: #FF7518;
+    --monarca-black: #1A1A1A;
+    --monarca-light: #FFF1E6;
+    --monarca-secondary: #FFB067;
+}
+
+.navbar {
+    background-color: var(--monarca-black) !important;
+}
+
+.btn-primary {
+    background-color: var(--monarca-orange);
+    border-color: var(--monarca-orange);
+}
+
+.btn-primary:hover {
+    background-color: var(--monarca-secondary);
+    border-color: var(--monarca-secondary);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--monarca-orange);
+    border-color: var(--monarca-orange);
+}
+
+.text-primary {
+    color: var(--monarca-orange) !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('/api/placeholder/1200/400');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.product-card {
+    transition: transform 0.3s;
+    border: 2px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--monarca-orange);
+}
+
+.drone-status {
+    background-color: var(--monarca-light);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--monarca-orange);
+}
+
+.progress-bar {
+    background-color: var(--monarca-orange);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: var(--monarca-black);
+}
+
+.features-icon {
+    color: var(--monarca-orange);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    position: relative;
+    padding-left: 15px;
+    border-left: 4px solid var(--monarca-orange);
+}
+
+.footer {
+    background-color: var(--monarca-black);
+    color: white;
+    padding: 2rem 0;
+}
+
+.form-control:focus {
+    border-color: var(--monarca-orange);
+    box-shadow: 0 0 0 0.25rem rgba(255, 117, 24, 0.25);
+}
+
+.form-select:focus {
+    border-color: var(--monarca-orange);
+    box-shadow: 0 0 0 0.25rem rgba(255, 117, 24, 0.25);
+}
+
+/* Css Misael */
+
+.titulo{
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.subtitulo{
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sobre-nosotros{
+    background-color: #fff1e6;
+    padding: 30px 0 60px 0;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.imagen-acerca-de{
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contenedor-sobre-nosotros{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0,.5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 0px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* Portafolio */
+
+.portafolio{
+    background: #fff;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+    height: 200px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0,.5);
+}
+
+.imagen-port >img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(32, 92%, 59%, 0.50);
+    transition: transform -5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color:#000;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* Equipo */
+#equipo .titulo_{
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.cards{
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: #231e1a;
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0,.5);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #eddcb1;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.cards .card .text-card{
+    width: 100%;
+    color: #eddcb1;
+}
+
+.cards .card .text-card h4,
+.cards .card .text-card p{
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Contenedor para posicionar el icono dentro del input */
+.position-relative {
+    position: relative;
+}
+
+/* Estilo del botón de mostrar/ocultar contraseña */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-5%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.toggle-password:focus {
+    outline: none;
+}
+
+.form-control {
+    padding-right: 2.5rem; /* Espacio para el ícono */
+}
+
+/* Hacer que el contenedor principal ocupe el espacio restante */
+.container {
+    flex: 1;
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto; /* Empuja el footer al final de la página */
+}
+
+/* Servicios */
+
+.servicios{
+    background: #fff;
+    padding: 15px;
+}
+
+.servicio-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Hace que los elementos se acomoden en varias filas si es necesario */
+    margin-top: 20px;
+}
+
+.servicio-ind{
+    width: 90%; /* Ajusta el ancho para hacerlo más estrecho en pantallas grandes */
+    max-width: 300px; /* Limita el ancho máximo de cada tarjeta */
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar las tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9;
+    margin: 10px;
+}
+
+.servicio-ind ul{
+    padding-left: 20px;
+    text-align: left;
+}
+
+.servicio-ind p {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px;
+    background-color: #ff7518; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-weight: bold !important; /* Texto en negritas */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin-top: 15px; /* Espacio adicional en la parte superior */
+    width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de botón */
+}
+
+
+.servicio-ind p:hover {
+    background-color: #a6551f; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+
+.servicio-ind img{
+    width: 80%; /* Ajuste del ancho de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.servicio-ind p{
+    font-weight: bold;
+    color: #fff;
+}
+
+.dron{
+    background-color: #fff1e6;
+    padding: 15px;
+}
+
+@media screen and (max-width:900px){
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-nosotros .contenido-textos{
+        padding-top: 25px;
+        width: 90%;
+    }
+    .imagen-acerca-de{
+        max-width: 100%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /* Equipo */
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        top: 50px;
+        right: 20px;
+        padding: 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li a {
+        color: black;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .textos-header h1 {
+        font-size: 30px;
+    }
+
+    .textos-header h2 {
+        font-size: 18px;
+    }
+
+    .test img {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Acerca de monarca */
+
+    .imagen-acerca-de{
+        margin-bottom: 60px;
+        width: 90%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* GALERIA */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #c96c26;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 300px;
+        height: auto;
+        margin-bottom: 15px;
+        justify-items: center;
+    }
+    
+    .logo {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+        justify-items: center;
+    }
+}

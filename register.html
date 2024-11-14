@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - FarmaciaDron Monarca</title>
+    <title>Registrarse - FarmaciaDron Monarca</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets\images\fav\favicon.ico" type="image/x-icon">
     <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -39,25 +38,29 @@
         </div>
     </nav>
     <div class="container py-5">
-        <div class="d-flex justify-content-center mb-4">
-            <img src="assets\images\logo.png" alt="Monarca Logo" class="img-fluid" style="max-width: 200px";/>
-        </div>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <!-- <h2 class="mb-4 text-center">Iniciar Sesión</h2> -->
+                <h2 class="mb-4 text-center">Registrarse</h2>
                 <form>
                     <div class="mb-3">
-                        <label for="email" class="form-label"> 👤 Correo Electrónico</label>
+                        <label for="name" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
                         <input type="email" class="form-control" id="email" required>
                     </div>
-                    <div class="mb-3 position-relative">
-                        <label for="password" class="form-label">🔒 Contraseña</label>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="password" required>
-                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
                     <p class="mt-3 text-center">
-                        ¿No tienes cuenta? <a href="register.html">Regístrate aquí</a>
+                        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
                     </p>
                 </form>
             </div>
@@ -82,13 +85,6 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function togglePasswordVisibility() {
-        const passwordInput = document.getElementById("password");
-        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-        passwordInput.setAttribute("type", type);
-    }
-    </script>
 </body>
 
 </html>

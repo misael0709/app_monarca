@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - FarmaciaDron Monarca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets\images\fav\favicon.ico" type="image/x-icon">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets\images\simbolo.png" alt="Monarca" style="height: 30px; width: auto;"> Monarca
+            </a>   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tracking.html">Rastrear Pedido</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito</a>
+                    </li>
+                </ul>
+                <a href="cuenta.html" class="btn btn-outline-light">
+                    👤 Mi Cuenta
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- User Account Section -->
+    <div class="container py-5">
+        <h2 class="section-title mb-4">Mi Cuenta</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <!-- User Info -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5>Información del Usuario</h5>
+                        <p><strong>Nombre:</strong> Juan Pérez</p>
+                        <p><strong>Email:</strong> juan.perez@example.com</p>
+                        <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+                        <button class="btn btn-primary">Editar Información</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <!-- Order History -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Historial de Pedidos</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th># Pedido</th>
+                                        <th>Fecha</th>
+                                        <th>Total</th>
+                                        <th>Estado</th>
+                                        <th>Detalles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DRN-123456</td>
+                                        <td>05/11/2024</td>
+                                        <td>$500 MXN</td>
+                                        <td>Entregado</td>
+                                        <td><button class="btn btn-sm btn-outline-info">Ver</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DRN-123457</td>
+                                        <td>28/10/2024</td>
+                                        <td>$300 MXN</td>
+                                        <td>Entregado</td>
+                                        <td><button class="btn btn-sm btn-outline-info">Ver</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DRN-123457</td>
+                                        <td>28/11/2024</td>
+                                        <td>$300 MXN</td>
+                                        <td>En camino</td>
+                                        <td><button class="btn btn-sm btn-outline-info">Ver</button></td>
+                                    </tr>
+                                    <!-- More orders can be added here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><img src="assets\images\simbolo.png" alt="Monarca" style="height: 30px; width: auto;">
+                        Monarca</h5>
+                    <p>Inspirados en la belleza y eficiencia de la naturaleza</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Síguenos en redes sociales</p>
+                    <a href="#" class="text-white me-3">Facebook</a>
+                    <a href="#" class="text-white me-3">Twitter</a>
+                    <a href="#" class="text-white">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
